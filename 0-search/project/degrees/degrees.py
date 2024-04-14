@@ -97,21 +97,16 @@ def neighbors_for_person(person_id):
 def shortest_path(source, target):
     queue = QueueFrontier()
     visited = set()
-    queue.add({"person_id": source, "path": []})
+    queue.add((source, []))
 
     while not queue.empty():
-        node = queue.remove()
-        visited.add(node["person_id"])
-        if node["person_id"] == target:
-            return node["path"]
-        for movie_id, neighbor_id in neighbors_for_person(node["person_id"]):
+        person_id, path = queue.remove()
+        visited.add(person_id)
+        if person_id == target:
+            return path
+        for movie_id, neighbor_id in neighbors_for_person(person_id):
             if neighbor_id not in visited:
-                queue.add(
-                    {
-                        "person_id": neighbor_id,
-                        "path": node["path"] + [(movie_id, neighbor_id)],
-                    }
-                )
+                queue.add((neighbor_id, path + [(movie_id, neighbor_id)]))
 
     return None
 
