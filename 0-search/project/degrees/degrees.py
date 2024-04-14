@@ -92,7 +92,7 @@ def neighbors_for_person(person_id):
     return neighbors
 
 
-# Uses a breadth-first search algorithm, which ensures that the first
+# Uses a breadth-first search algorithm, using a queue, which ensures that the first
 # connection found between the source and target is the shortest possible path.
 def shortest_path(source, target):
     queue = QueueFrontier()
