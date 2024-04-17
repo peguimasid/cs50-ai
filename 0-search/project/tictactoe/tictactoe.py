@@ -17,6 +17,9 @@ def initial_state():
 
 
 def player(board):
+    """
+    Returns player who has the next turn on a board.
+    """
     x_count = sum(cell == X for row in board for cell in row)
     o_count = sum(cell == O for row in board for cell in row)
     return X if x_count <= o_count else O
@@ -26,7 +29,13 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    raise NotImplementedError
+    result = set(
+        (i, j)
+        for i, row in enumerate(board)
+        for j, cell in enumerate(row)
+        if cell is EMPTY
+    )
+    return result
 
 
 def result(board, action):
