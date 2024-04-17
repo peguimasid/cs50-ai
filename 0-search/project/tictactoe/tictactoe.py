@@ -44,6 +44,8 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
     i, j = action
+    if not (0 <= i <= 2 and 0 <= j <= 2) or board[i][j] is not EMPTY:
+        raise ValueError("Invalid move")
     new_board = copy.deepcopy(board)
     new_board[i][j] = player(board)
     return new_board
