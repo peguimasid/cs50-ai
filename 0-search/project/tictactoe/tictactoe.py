@@ -30,12 +30,7 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    result = set(
-        (i, j)
-        for i, row in enumerate(board)
-        for j, cell in enumerate(row)
-        if cell is EMPTY
-    )
+    result = set((i, j) for i in range(3) for j in range(3) if board[i][j] is EMPTY)
     return result
 
 
