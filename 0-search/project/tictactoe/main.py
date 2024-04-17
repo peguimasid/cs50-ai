@@ -1,7 +1,7 @@
-from tictactoe import X, O, initial_state, player, actions
+from tictactoe import X, O, initial_state, player, actions, result
 
 board = initial_state()
 
-board[1][0] = X
 print(board)
-print(actions(board))
+print(result(board, (1, 1)))
+print(board)
