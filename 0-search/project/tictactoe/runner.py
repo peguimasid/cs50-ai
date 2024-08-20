@@ -13,9 +13,11 @@ white = (255, 255, 255)
 
 screen = pygame.display.set_mode(size)
 
-mediumFont = pygame.font.Font("OpenSans-Regular.ttf", 28)
-largeFont = pygame.font.Font("OpenSans-Regular.ttf", 40)
-moveFont = pygame.font.Font("OpenSans-Regular.ttf", 60)
+font = "OpenSans-Regular.ttf"
+
+mediumFont = pygame.font.Font(font, 28)
+largeFont = pygame.font.Font(font, 40)
+moveFont = pygame.font.Font(font, 60)
 
 user = None
 board = ttt.initial_state()
@@ -96,13 +98,13 @@ while True:
         if game_over:
             winner = ttt.winner(board)
             if winner is None:
-                title = f"Game Over: Tie."
+                title = "Game Over: Tie."
             else:
                 title = f"Game Over: {winner} wins."
         elif user == player:
             title = f"Play as {user}"
         else:
-            title = f"Computer thinking..."
+            title = "Computer thinking..."
         title = largeFont.render(title, True, white)
         titleRect = title.get_rect()
         titleRect.center = ((width / 2), 30)
