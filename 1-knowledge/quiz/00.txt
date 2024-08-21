@@ -1,0 +1,40 @@
+=== QUESTION-1 ===
+
+Consider these logical sentences:
+
+1. If Hermione is in the library, then Harry is in the library.
+2. Hermione is in the library.
+3. Ron is in the library and Ron is not in the library.
+4. Harry is in the library.
+5. Harry is not in the library or Hermione is in the library.
+6. Ron is in the library or Hermione is in the library.
+
+Which of the following logical entailments is true?
+
+Sentence 6 entails Sentence 2
+Sentence 1 entails Sentence 4
+Sentence 6 entails Sentence 3
+Sentence 2 entails Sentence 5
+Sentence 1 entails Sentence 2
+Sentence 5 entails Sentence 6
+
+Answer: Sentence 2 entails Sentence 5
+Hermione is in the library. --> Harry is not in the library or Hermione is in the library.
+
+=== QUESTION-2 ===
+
+//
+
+Answer:
+
+=== QUESTION-3 ===
+
+//
+
+Answer:
+
+=== QUESTION-4 ===
+
+//
+
+Answer: 
