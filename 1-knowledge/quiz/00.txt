@@ -34,9 +34,24 @@ Answer: (A ∨ B) ∧ ¬ (A ∧ B) -> (A or B) and not(A and B)
 
 === QUESTION-3 ===
 
-//
+Let propositional variable R be that “It is raining,” the variable C be that 
+“It is cloudy,” and the variable S be that “It is sunny.” 
+Which of the following a propositional logic representation of the sentence
+“If it is raining, then it is cloudy and not sunny.”?
 
-Answer:
+---
+R => It is raining
+C => Is is cloudy
+S => It is sunny
+---
+
+(R → C) ∧ ¬S
+R → C → ¬S
+R ∧ C ∧ ¬S
+R → (C ∧ ¬S)
+(C ∨ ¬S) → R
+
+Answer: R → (C ∧ ¬S)
 
 === QUESTION-4 ===
 
