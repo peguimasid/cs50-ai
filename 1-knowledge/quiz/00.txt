@@ -23,9 +23,14 @@ Hermione is in the library. --> Harry is not in the library or Hermione is in th
 
 === QUESTION-2 ===
 
-//
+There are other logical connectives that exist, other than the ones discussed in lecture. One of the most common is “Exclusive Or” (represented using the symbol ⊕). The expression A ⊕ B represents the sentence “A or B, but not both.” Which of the following is logically equivalent to A ⊕ B?
 
-Answer:
+(A ∨ B) ∧ ¬ (A ∧ B)
+(A ∧ B) ∨ ¬ (A ∨ B)
+(A ∨ B) ∧ (A ∧ B)
+(A ∨ B) ∧ ¬ (A ∨ B)
+
+Answer: (A ∨ B) ∧ ¬ (A ∧ B) -> (A or B) and not(A and B)
 
 === QUESTION-3 ===
 
