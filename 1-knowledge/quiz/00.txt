@@ -55,6 +55,31 @@ Answer: R → (C ∧ ¬S)
 
 === QUESTION-4 ===
 
-//
+---
+∧ => AND
+∨ => OR
+∀x => For all values of X, the statement is gonna hold true
+∃x => There exists an value X, that the statement is gonna hold true
 
-Answer: 
+Example:
+- ∀x. Person(x) -> (∃y. House(y) ∧ BelongsTo(x, y))
+- For all x, person x implies there exists an house y, that the person
+  x belongs to that house y
+---
+
+Consider, in first-order logic, the following predicate symbols.
+Student(x) represents the predicate that “x is a student.” Course(x)
+represents the predicate that “x is a course.” Enrolled(x, y) represents the
+predicate that “x is enrolled in y.” Which of the following is a first-order 
+logic translation of the sentence:
+
+“There is a course that Harry and Hermione are both enrolled in.”?
+
+∃x. Course(x) ∧ Enrolled(Harry, x) ∧ Enrolled(Hermione, x)
+∀x. Course(x) ∧ Enrolled(Harry, x) ∧ Enrolled(Hermione, x)
+∃x. Enrolled(Harry, x) ∧ ∃y. Enrolled(Hermione, y)
+∀x. Enrolled(Harry, x) ∧ ∀y. Enrolled(Hermione, y)
+∃x. Enrolled(Harry, x) ∨ Enrolled(Hermione, x)
+∀x. Enrolled(Harry, x) ∨ Enrolled(Hermione, x)
+
+Answer: ∃x. Course(x) ∧ Enrolled(Harry, x) ∧ Enrolled(Hermione, x)
